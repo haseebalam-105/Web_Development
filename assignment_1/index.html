@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal CV of Haseeb Alam, software developer focused on full-stack development and AI automation.">
+  <title>Haseeb Alam | Personal CV</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <figure class="profile">
+      <img src="photo.jpg" alt="Placeholder portrait of Haseeb Alam" width="160" height="160">
+    </figure>
+    <div class="intro">
+      <h1>Haseeb Alam</h1>
+      <p class="tagline">Software Developer | AI Automation | Full-Stack Development</p>
+    </div>
+    <nav class="main-nav" aria-label="Page sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Computer Science student and hands-on software developer with practical experience building full-stack web applications, AI-powered automation workflows, and database-driven systems for academic and independent client projects.</p>
+      <p>Skilled in REST APIs, relational/NoSQL databases, and AI/LLM features including retrieval-augmented generation (RAG) and AI agent workflows built with n8n. Comfortable across the stack, from React/Next.js frontends to Python and Node.js backends, with a growing focus on applying AI and automation to real-world problems.</p>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <ul class="skills"><li>C++</li><li>Python</li><li>Java</li><li>JavaScript</li><li>SQL</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3>Web Development</h3>
+        <ul class="skills"><li>React</li><li>Next.js</li><li>Node.js</li><li>Express.js</li><li>HTML/CSS</li><li>REST APIs</li><li>MERN stack</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3>Databases</h3>
+        <ul class="skills"><li>MySQL</li><li>PostgreSQL</li><li>MongoDB/Atlas</li><li>Pinecone (vector DB)</li><li>Database design &amp; normalization</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3>AI / Automation</h3>
+        <ul class="skills"><li>Machine Learning</li><li>RAG</li><li>Embeddings</li><li>AI agents</li><li>LLM integration</li><li>Prompt engineering</li><li>n8n</li><li>Webhooks</li><li>Google Gemini API</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3>Tools</h3>
+        <ul class="skills"><li>Git</li><li>GitHub</li><li>Docker</li><li>Postman</li><li>VS Code</li><li>Cloudflare</li><li>Qt/PyQt6</li><li>JavaFX</li></ul>
+      </div>
+    </section>
+
+    <section id="experience" class="card">
+      <h2>Freelance &amp; Independent Client Work</h2>
+      <article class="entry">
+        <h3>Independent Full-Stack Developer</h3>
+        <p class="meta">Freelance, remote clients &middot; Ongoing</p>
+        <ul>
+          <li>Engineered responsive, client-facing websites end-to-end, from requirements gathering through deployment, using React/Next.js, Tailwind CSS, and Node.js/Express with MongoDB.</li>
+          <li>Delivered authentication, admin dashboards, and CRUD functionality independently, managing each engagement directly with the client from scope to delivery and support.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Selected Projects</h2>
+      <article class="entry">
+        <h3>AI-Powered Resume Screener</h3>
+        <p class="meta">Next.js, MongoDB, AI/LLM Integration, n8n</p>
+        <ul><li>Architected a web app that extracts text from uploaded resume PDFs and sends it to an AI model for automated scoring, storing results in MongoDB with automated email notifications.</li><li>Rebuilt the same screening pipeline as a low-code n8n automation workflow to compare full-stack and workflow-automation approaches.</li></ul>
+      </article>
+      <article class="entry">
+        <h3>AI Agent Automation &amp; Knowledge Base (RAG) Pipeline</h3>
+        <p class="meta">n8n, Google Gemini API, Vector Database, Docker</p>
+        <ul><li>Designed multi-step AI agent workflows integrating webhooks and LLM (Gemini) calls to automate document processing, using Docker and Cloudflare Tunnel to expose local endpoints.</li><li>Built a knowledge-base ingestion pipeline that chunks documents and stores embeddings in a vector database, applying RAG to ground AI responses in stored content.</li></ul>
+      </article>
+      <article class="entry">
+        <h3>E-Commerce Full-Stack Web Application</h3>
+        <p class="meta">Next.js, React, Node.js, MongoDB, Cloudinary</p>
+        <ul><li>Developed a storefront with cart and cash-on-delivery order handling plus a separate admin dashboard for product/order management, using Cloudinary for media and MongoDB Atlas for persistence.</li></ul>
+      </article>
+      <article class="entry">
+        <h3>WhatsApp AI Automation</h3>
+        <p class="meta">n8n, Evolution API, Baileys, Docker</p>
+        <ul><li>Connected WhatsApp messaging to n8n via Evolution API/Baileys, orchestrating webhook-driven flows that route messages through AI processing for automated responses.</li></ul>
+      </article>
+      <article class="entry">
+        <h3>Hostel Management System</h3>
+        <p class="meta">SQL, Python, Database Design</p>
+        <ul><li>Designed a normalized relational database with role-based access to manage student records, room allocation, billing, and complaints, implementing full CRUD operations.</li></ul>
+      </article>
+      <article class="entry">
+        <h3>Advanced To-Do / Task Management System</h3>
+        <p class="meta">C++, Qt, Data Structures &amp; Algorithms</p>
+        <ul><li>Built a desktop task manager applying core DSA (stack-based undo, task dependencies, search/filter/sort) plus recurring tasks, Pomodoro timer, and streak tracking with persistent storage.</li></ul>
+      </article>
+    </section>
+
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <ul class="timeline">
+        <li>
+          <article class="entry">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p class="meta">COMSATS University Islamabad, Lahore Campus &middot; Expected <time datetime="2027-12">Dec 2027</time></p>
+            <p>Relevant coursework: Data Structures &amp; Algorithms, Database Systems, Advanced Databases, Artificial Intelligence, Machine Learning, Software Engineering.</p>
+          </article>
+        </li>
+      </ul>
+      <h3 class="subhead">Certifications</h3>
+      <ul class="plain-list">
+        <li>CCNA: Introduction to Networks (Cisco Networking Academy)</li>
+        <li>English Access Microscholarship Program (U.S. Embassy Islamabad)</li>
+        <li>Python Programming Certification</li>
+        <li>Prompt Engineering Certification</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <address>
+        <ul class="contact-list">
+          <li>Email: <a href="mailto:haseebalam.dev@gmail.com">haseebalam.dev@gmail.com</a></li>
+          <li>Phone: <a href="tel:+923077165209">03077165209</a></li>
+          <li>LinkedIn: <a href="https://linkedin.com/in/haseebalamcs" target="_blank" rel="noopener noreferrer">linkedin.com/in/haseebalamcs</a></li>
+          <li>GitHub: <a href="https://github.com/haseebalam-105" target="_blank" rel="noopener noreferrer">github.com/haseebalam-105</a></li>
+          <li>Portfolio: <a href="https://haseebalam.vercel.app" target="_blank" rel="noopener noreferrer">haseebalam.vercel.app</a></li>
+          <li>Location: Lahore, Pakistan</li>
+        </ul>
+      </address>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Haseeb Alam. Built with plain HTML5 and CSS.</p>
+  </footer>
+
+</body>
+</html>
