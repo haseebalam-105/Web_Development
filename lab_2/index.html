@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 2 | Responsive Navbar and Grid</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="border-bottom bg-white sticky-top">
+    <!-- navbar-expand-md: expanded at 768px and up, hamburger below 768px -->
+    <nav class="navbar navbar-expand-md" aria-label="Main navigation">
+      <div class="container">
+
+        <!-- Logo (left) - same SAPPHIRE wordmark style as Assignment 2 -->
+        <a class="navbar-brand site-logo" href="index.html">SAPPHIRE</a>
+
+        <!-- Cart + hamburger (right on phone; cart stays visible when collapsed) -->
+        <div class="nav-actions d-flex align-items-center justify-content-end gap-3 ms-auto order-md-2">
+          <a class="cart-link" href="#" aria-label="Cart, 0 items">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
+            <span class="cart-badge badge rounded-pill text-bg-dark">0</span>
+          </a>
+          <button class="navbar-toggler" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Links (centered on desktop/tablet, collapsed below 768px) -->
+        <div class="collapse navbar-collapse order-md-1" id="mainNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#products">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-4" id="products">
+    <h1 class="h3 mb-4">Product Grid</h1>
+
+    <!-- 1 column on phone, 2 on tablet (768px+), 4 on desktop (992px+) -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <div class="col">
+        <div class="card h-100 product-card">
+          <img src="images/p1.webp" class="card-img-top" alt="3 Piece - Printed Lawn Suit" width="1000" height="1200">
+          <div class="card-body">
+            <h2 class="card-title h6">3 Piece - Printed Lawn Suit</h2>
+            <p class="card-text">Rs. 5,990</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 product-card">
+          <img src="images/p2.webp" class="card-img-top" alt="2 Piece - Embroidered Cambric Suit" width="1000" height="1200">
+          <div class="card-body">
+            <h2 class="card-title h6">2 Piece - Embroidered Cambric Suit</h2>
+            <p class="card-text">Rs. 7,490</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 product-card">
+          <img src="images/p3.webp" class="card-img-top" alt="3 Piece - Embroidered Lawn Suit" width="1000" height="1200">
+          <div class="card-body">
+            <h2 class="card-title h6">3 Piece - Embroidered Lawn Suit</h2>
+            <p class="card-text">Rs. 8,990</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 product-card">
+          <img src="images/p4.webp" class="card-img-top" alt="2 Piece - Printed Khaddar Suit" width="1000" height="1200">
+          <div class="card-body">
+            <h2 class="card-title h6">2 Piece - Printed Khaddar Suit</h2>
+            <p class="card-text">Rs. 6,490</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 product-card">
+          <img src="images/p5.webp" class="card-img-top" alt="Unstitched 3 Piece - Digital Print Suit" width="1000" height="1200">
+          <div class="card-body">
+            <h2 class="card-title h6">Unstitched 3 Piece - Digital Print Suit</h2>
+            <p class="card-text">Rs. 4,990</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 product-card">
+          <img src="images/p6.webp" class="card-img-top" alt="Embroidered Cotton Kurta" width="1000" height="1200">
+          <div class="card-body">
+            <h2 class="card-title h6">Embroidered Cotton Kurta</h2>
+            <p class="card-text">Rs. 3,990</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 product-card">
+          <img src="images/p7.webp" class="card-img-top" alt="Printed Lawn Shirt" width="1000" height="1200">
+          <div class="card-body">
+            <h2 class="card-title h6">Printed Lawn Shirt</h2>
+            <p class="card-text">Rs. 2,990</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 product-card">
+          <img src="images/p8.webp" class="card-img-top" alt="Embroidered Chiffon Dupatta" width="1000" height="1200">
+          <div class="card-body">
+            <h2 class="card-title h6">Embroidered Chiffon Dupatta</h2>
+            <p class="card-text">Rs. 3,490</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
