@@ -1,0 +1,70 @@
+/* Custom styles - Bootstrap handles the grid and navbar */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+}
+
+.site-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: #111;
+}
+
+.cart-link {
+  color: #111;
+}
+
+.navbar-nav .nav-link {
+  color: #111;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.navbar-nav .nav-link.active {
+  border-bottom: 2px solid #111;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+}
+
+.product-card .card-img-top {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.product-card .card-title a {
+  color: #222;
+  text-decoration: none;
+}
+
+.product-card .card-title a:hover {
+  text-decoration: underline;
+}
+
+.quantity-box {
+  max-width: 120px;
+}
+
+.site-footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
+
+.site-footer a {
+  color: #444;
+  text-decoration: none;
+  line-height: 1.9;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
