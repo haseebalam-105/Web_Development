@@ -1,0 +1,174 @@
+/* Custom styles - Bootstrap handles the grid and navbar */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+}
+
+.site-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: #111;
+}
+
+.cart-link {
+  color: #111;
+}
+
+.navbar-nav .nav-link {
+  color: #111;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.navbar-nav .nav-link.active {
+  border-bottom: 2px solid #111;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+}
+
+.product-card .card-img-top {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.product-card .card-title a {
+  color: #222;
+  text-decoration: none;
+}
+
+.product-card .card-title a:hover {
+  text-decoration: underline;
+}
+
+.quantity-box {
+  max-width: 120px;
+}
+
+.site-footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
+
+.site-footer a {
+  color: #444;
+  text-decoration: none;
+  line-height: 1.9;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   MIDTERM - personal numbers (roll SP24-BCS-142)
+   N = 42, BP = 642px, H = 294, K = 3
+   ========================================================= */
+:root {
+  --accent: hsl(294, 70%, 45%); /* H = (42 x 7) mod 360 = 294 */
+}
+
+/* ---------- Task 1: CSS-only category filter ---------- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Hide the real radio circle but keep it accessible to keyboard / screen readers */
+.filter-bar input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.filter-bar label {
+  border: 1px solid #222;
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* Selected filter uses accent colour H */
+.filter-bar input[type="radio"]:checked + label {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.filter-bar input[type="radio"]:focus-visible + label {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* :has() lets the <main> know which radio is checked; non-matching columns
+   get display:none, so they are removed from the flex row and leave no gaps */
+main:has(#filter-suits:checked) #product-grid > .col:not(.cat-suits),
+main:has(#filter-tops:checked) #product-grid > .col:not(.cat-tops),
+main:has(#filter-essentials:checked) #product-grid > .col:not(.cat-essentials) {
+  display: none;
+}
+
+/* ---------- Task 3 helpers (classes toggled by script.js) ---------- */
+#product-grid > .col.search-hidden {
+  display: none;
+}
+
+.premium-badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--accent);
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+/* ---------- Task 2: product page grid with named areas ---------- */
+/* Below BP: one column - image, details, description */
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "image"
+    "details"
+    "description";
+  gap: 1.5rem;
+}
+
+.product-image       { grid-area: image; }
+.product-details     { grid-area: details; }
+.product-description { grid-area: description; }
+
+/* From BP (642px) and wider: image + details side by side,
+   description full width underneath, details box is sticky */
+@media (min-width: 642px) {
+  .product-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "image       details"
+      "description description";
+    gap: 2rem;
+  }
+
+  .product-details {
+    position: sticky;
+    top: 112px;          /* (N mod 40) + 70 = (42 mod 40) + 70 = 112px */
+    align-self: start;   /* needed so the box is shorter than its row and can stick */
+  }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sale | Sapphire</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header class="border-bottom bg-white">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center py-3">
+        <a class="site-logo text-decoration-none" href="index.html">SAPPHIRE</a>
+        <a class="cart-link" href="#" aria-label="Cart"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg></a>
+      </div>
+      <nav class="navbar navbar-expand p-0 pb-2" aria-label="Main navigation">
+        <ul class="navbar-nav flex-wrap justify-content-center mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Kids</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sale</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container py-4">
+    <h1 class="h3 text-center mb-4">Sale</h1>
+
+    <!-- Task 1: CSS-only category filter (radio buttons + :has) -->
+    <div class="filter-bar mb-3" role="radiogroup" aria-label="Filter by category">
+      <input type="radio" name="category" id="filter-all" checked>
+      <label for="filter-all">All</label>
+      <input type="radio" name="category" id="filter-suits">
+      <label for="filter-suits">Suits</label>
+      <input type="radio" name="category" id="filter-tops">
+      <label for="filter-tops">Kurtas &amp; Shirts</label>
+      <input type="radio" name="category" id="filter-essentials">
+      <label for="filter-essentials">Dupattas &amp; Trousers</label>
+    </div>
+
+    <!-- Task 3: live search + price sort -->
+    <div class="d-flex flex-column flex-sm-row gap-2 mb-4">
+      <input type="search" id="search-box" class="form-control" placeholder="Search products..." aria-label="Search products">
+      <button type="button" id="sort-btn" class="btn btn-outline-dark flex-shrink-0">Sort by price</button>
+    </div>
+    <p id="no-results" class="text-center py-5 fs-5" hidden>No products found</p>
+
+    <div id="product-grid" class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-md-4">
+      <div class="col cat-suits">
+        <div class="card h-100 border-0 product-card">
+          <a href="product.html"><img src="images/p1.webp" class="card-img-top" alt="3 Piece - Printed Lawn Suit"></a>
+          <div class="card-body px-0">
+            <h2 class="card-title h6"><a href="product.html">3 Piece - Printed Lawn Suit</a></h2>
+            <p class="card-text fw-semibold mb-0">Rs. 5,990</p>
+          </div>
+          <button type="button" class="btn btn-dark w-100">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col cat-suits">
+        <div class="card h-100 border-0 product-card">
+          <a href="product.html"><img src="images/p2.webp" class="card-img-top" alt="2 Piece - Embroidered Cambric Suit"></a>
+          <div class="card-body px-0">
+            <h2 class="card-title h6"><a href="product.html">2 Piece - Embroidered Cambric Suit</a></h2>
+            <p class="card-text fw-semibold mb-0">Rs. 7,490</p>
+          </div>
+          <button type="button" class="btn btn-dark w-100">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col cat-suits">
+        <div class="card h-100 border-0 product-card">
+          <a href="product.html"><img src="images/p3.webp" class="card-img-top" alt="3 Piece - Embroidered Lawn Suit"></a>
+          <div class="card-body px-0">
+            <h2 class="card-title h6"><a href="product.html">3 Piece - Embroidered Lawn Suit</a></h2>
+            <p class="card-text fw-semibold mb-0">Rs. 8,990</p>
+          </div>
+          <button type="button" class="btn btn-dark w-100">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col cat-suits">
+        <div class="card h-100 border-0 product-card">
+          <a href="product.html"><img src="images/p4.webp" class="card-img-top" alt="2 Piece - Printed Khaddar Suit"></a>
+          <div class="card-body px-0">
+            <h2 class="card-title h6"><a href="product.html">2 Piece - Printed Khaddar Suit</a></h2>
+            <p class="card-text fw-semibold mb-0">Rs. 6,490</p>
+          </div>
+          <button type="button" class="btn btn-dark w-100">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col cat-suits">
+        <div class="card h-100 border-0 product-card">
+          <a href="product.html"><img src="images/p5.webp" class="card-img-top" alt="Unstitched 3 Piece - Digital Print Suit"></a>
+          <div class="card-body px-0">
+            <h2 class="card-title h6"><a href="product.html">Unstitched 3 Piece - Digital Print Suit</a></h2>
+            <p class="card-text fw-semibold mb-0">Rs. 4,990</p>
+          </div>
+          <button type="button" class="btn btn-dark w-100">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col cat-tops">
+        <div class="card h-100 border-0 product-card">
+          <a href="product.html"><img src="images/p6.webp" class="card-img-top" alt="Embroidered Cotton Kurta"></a>
+          <div class="card-body px-0">
+            <h2 class="card-title h6"><a href="product.html">Embroidered Cotton Kurta</a></h2>
+            <p class="card-text fw-semibold mb-0">Rs. 3,990</p>
+          </div>
+          <button type="button" class="btn btn-dark w-100">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col cat-tops">
+        <div class="card h-100 border-0 product-card">
+          <a href="product.html"><img src="images/p7.webp" class="card-img-top" alt="Printed Lawn Shirt"></a>
+          <div class="card-body px-0">
+            <h2 class="card-title h6"><a href="product.html">Printed Lawn Shirt</a></h2>
+            <p class="card-text fw-semibold mb-0">Rs. 2,990</p>
+          </div>
+          <button type="button" class="btn btn-dark w-100">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col cat-essentials">
+        <div class="card h-100 border-0 product-card">
+          <a href="product.html"><img src="images/p8.webp" class="card-img-top" alt="Embroidered Chiffon Dupatta"></a>
+          <div class="card-body px-0">
+            <h2 class="card-title h6"><a href="product.html">Embroidered Chiffon Dupatta</a></h2>
+            <p class="card-text fw-semibold mb-0">Rs. 3,490</p>
+          </div>
+          <button type="button" class="btn btn-dark w-100">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col cat-suits">
+        <div class="card h-100 border-0 product-card">
+          <a href="product.html"><img src="images/p9.webp" class="card-img-top" alt="2 Piece - Dyed Cotton Suit"></a>
+          <div class="card-body px-0">
+            <h2 class="card-title h6"><a href="product.html">2 Piece - Dyed Cotton Suit</a></h2>
+            <p class="card-text fw-semibold mb-0">Rs. 5,490</p>
+          </div>
+          <button type="button" class="btn btn-dark w-100">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col cat-tops">
+        <div class="card h-100 border-0 product-card">
+          <a href="product.html"><img src="images/p10.webp" class="card-img-top" alt="Printed Cambric Shirt"></a>
+          <div class="card-body px-0">
+            <h2 class="card-title h6"><a href="product.html">Printed Cambric Shirt</a></h2>
+            <p class="card-text fw-semibold mb-0">Rs. 2,490</p>
+          </div>
+          <button type="button" class="btn btn-dark w-100">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col cat-essentials">
+        <div class="card h-100 border-0 product-card">
+          <a href="product.html"><img src="images/p11.webp" class="card-img-top" alt="Embroidered Net Dupatta"></a>
+          <div class="card-body px-0">
+            <h2 class="card-title h6"><a href="product.html">Embroidered Net Dupatta</a></h2>
+            <p class="card-text fw-semibold mb-0">Rs. 4,290</p>
+          </div>
+          <button type="button" class="btn btn-dark w-100">Add to Cart</button>
+        </div>
+      </div>
+      <div class="col cat-essentials">
+        <div class="card h-100 border-0 product-card">
+          <a href="product.html"><img src="images/p12.webp" class="card-img-top" alt="Cotton Trousers"></a>
+          <div class="card-body px-0">
+            <h2 class="card-title h6"><a href="product.html">Cotton Trousers</a></h2>
+            <p class="card-text fw-semibold mb-0">Rs. 1,990</p>
+          </div>
+          <button type="button" class="btn btn-dark w-100">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer mt-auto pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <h2 class="h6 text-uppercase">Sapphire</h2>
+          <p class="small mb-0">Pakistani fashion for women, men and kids.</p>
+        </div>
+        <div class="col-6 col-md-4">
+          <h2 class="h6 text-uppercase">Customer Care</h2>
+          <ul class="list-unstyled small mb-0">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return &amp; Exchange</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h2 class="h6 text-uppercase">Company</h2>
+          <ul class="list-unstyled small mb-0">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Store Locator</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4">
+      <p class="small text-center mb-0">&copy; 2026 Sapphire. Student assignment clone.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
